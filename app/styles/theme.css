@@ -109,3 +109,9 @@ body {
 button[aria-roledescription="sortable"] {
   display: none !important;
 }
+
+.oui-scaffold-footer {
+  display: none !important;
+}
+
+

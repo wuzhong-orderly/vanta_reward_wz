@@ -321,13 +321,13 @@ export const useOrderlyConfig = () => {
           </Flex>
 
           <Flex itemAlign={"center"} className="oui-gap-2">
-            {components.accountSummary}
-            {components.notify}
+            {/* {components.accountSummary} */}
+            {/* {components.notify} */}
             {components.linkDevice}
             {components.scanQRCode}
             {components.languageSwitcher}
             <ThemeToggleButton />
-            {components.subAccount}
+            {/* {components.subAccount} */}
             {components.chainMenu}
             {components.walletConnect}
 
