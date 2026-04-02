@@ -274,7 +274,9 @@ export const useOrderlyConfig = () => {
       </svg>
     );
 
-    const mainMenuItems: MainNavItem[] = [];
+    const mainMenuItems: MainNavItem[] = [
+      { name: "", href: "/", isHomePageInMobile: true },
+    ];
 
     // Add any custom menu items from config, excluding ones already hardcoded
     const hardcodedNames = mainMenuItems.map((m) => m.name.toUpperCase());
@@ -299,17 +301,11 @@ export const useOrderlyConfig = () => {
             itemAlign={"center"}
             className={cn("oui-gap-3", "oui-overflow-x-auto")}
           >
-            {isMobile && (
-              <CustomLeftNav
-                menus={mobileMenus}
-                externalLinks={customMenus}
-              />
-            )}
             <Link to="/" className="oui-flex-shrink-0">
               {isMobile &&
                 getRuntimeConfigBoolean("VITE_HAS_SECONDARY_LOGO") ? (
                 <img
-                  src={withBasePath("/logo-secondary.webp")}
+                  src={withBasePath("/logo.webp")}
                   alt="logo"
                   style={{ height: "32px" }}
                 />
@@ -380,7 +376,7 @@ export const useOrderlyConfig = () => {
                   />
                   {getRuntimeConfigBoolean("VITE_HAS_SECONDARY_LOGO") && (
                     <img
-                      src={withBasePath("/logo-secondary.webp")}
+                      src={withBasePath("/logo.webp")}
                       alt="logo"
                       className="logo-compact"
                       style={{ height: "32px" }}
